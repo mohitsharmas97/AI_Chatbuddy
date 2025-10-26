@@ -1,0 +1,89 @@
+/* Simple, clean styles */
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #7c3aed;
+  --text: #e6eef8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #071127, #071122);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.app {
+  width: 480px;
+  max-width: 95%;
+  background: radial-gradient(circle at 10% 10%, rgba(124,58,237,0.06), transparent),
+              linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  padding: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+h1 { margin: 0; font-size: 18px; }
+.hint { margin: 6px 0 0; font-size: 12px; color: rgba(230,238,248,0.7); }
+
+main#chat {
+  padding: 12px;
+  height: 440px;
+  overflow-y: auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+}
+.msg {
+  margin: 8px 0;
+  display: flex;
+}
+.msg.user { justify-content: flex-end; }
+.bubble {
+  max-width: 78%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  line-height: 1.35;
+}
+.msg.user .bubble {
+  background: linear-gradient(90deg, rgba(124,58,237,0.95), rgba(99,102,241,0.95));
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+.msg.assistant .bubble {
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  border-bottom-left-radius: 2px;
+}
+
+footer {
+  display:flex;
+  gap:8px;
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+input#input {
+  flex:1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+button#send {
+  padding: 8px 14px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button#send:active { transform: translateY(1px); }
+    
